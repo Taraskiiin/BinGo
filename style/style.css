@@ -1,0 +1,223 @@
+*{
+    box-sizing: border-box;
+}
+html
+,body{ 
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #151F32;
+    font-size: 12px;
+    line-height: 19px;
+}
+.container{
+    max-width: 1160px;
+    margin: 0 auto;
+    background-color: #FAFAFA;
+    padding-top: 40px;
+}
+.header__top-line{
+    padding:0 100px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+}
+.header__top-line a{
+    text-decoration: none;
+    color: inherit;
+}
+.nav{
+    padding-top: 5px;
+}
+.nav a{
+    margin-right: 80px;
+    position: relative;
+}
+.nav a:first-child{
+    margin-left: 230px;
+}
+.nav a:last-child{
+    margin-right: none;
+}
+.nav a:hover::before{
+    content:" ";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    background-color: #151F32;
+    top: 18px;
+    left: 0;
+}
+.sing__up-block{
+    min-width: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5px;
+    position: relative;
+}
+.sing__up-block img{
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
+.header__middle-box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+}
+.left__box{
+    padding: 0px 0px 60px 160px;
+    text-align: left;
+}
+.left__box h3{
+    font-size: 110px;
+    line-height: 132px;
+    color: #032F48;
+    font-weight: 900;
+    position: relative;
+    right: 84px;
+    top: -60px;
+    
+}
+.left__box h3::before{
+    content:" ";
+    position: absolute;
+    width: 85px;
+    height: 10px;
+    left: 8px;
+    bottom: 0;
+    background-color: #032F48;
+}
+.left__box h3::after{
+    content:" ";
+    position: absolute;
+    width: 46px;
+    height: 13px;
+    right: 62px;
+    top: 51px;
+    background-color: #032F48;
+}
+.left__box-inner{
+    position: relative;
+    color: #344159;
+    font-weight: 500;
+    font-size: 12px;
+    top: 45px;
+    line-height: 23px;
+}
+.left__box-inner p{
+    max-width: 194px;
+    max-height: 66px;
+}
+.tools__box{
+    background-color: #032F48;
+    display: block;
+    position: absolute;
+    width: 51px;
+    height: 48px;
+    right: -85px;
+    top: 0;
+}
+.tools__box::after{
+    content: " ";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../image/tools__icon.svg);
+    background-repeat: no-repeat;
+    margin-top: 17px;
+    margin-left: 18px;
+}
+.right__box{
+    background-color: #151F32;
+    width: 565px;
+    height: 492px;
+    padding-top: 56px;
+    color: #FCD3AC;
+    position: relative;
+    overflow: hidden;
+}
+.right__box h3{
+    font-weight: 900;
+    font-size: 28px;
+    line-height: 34px;
+    color: #FFFFFF;
+    margin-left: 76px;
+}
+.right__box p{
+    max-width: 190px;
+    min-height: 66px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 19px;
+    margin-left: 69px;
+    position: relative;
+}
+.right__box p::before{
+    content: ' ';
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    background-image: url(../image/Vector__stop.svg);
+    bottom: -60px;
+    left: 0;
+}
+.right__box p::after{
+    content: ' ';
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    background-image: url(../image/Vector__next.svg);
+    bottom: -63px;
+    left: 40px;
+}
+.right__box .blue__block{
+    width: 207px;
+    height: 207px;
+    background-color:  #78C9C0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+}
+.right__box::before{
+    content: " ";
+    position: absolute;
+    width: 670px;
+    height: 500px;
+    bottom: -185px;
+    right: -335px;
+    background-color: #FF7C14;
+    z-index: 1;
+    transform: matrix(0.7, -0.71, -0.71, -0.7, 0, 0);
+}
+.right__box::after{
+    content: ' ';
+    position: absolute;
+    width: 383px;
+    height: 701px;
+    background-color: #F9BA51;
+    bottom: -550px;
+    left: -105px;
+    transform: matrix(0.7, -0.71, -0.71, -0.7, 0, 0);
+    z-index: 0;
+}
+.right__box button{
+    position: relative;
+    height: 48px;
+    width: 133px;
+    right: 0px;
+    top: 163px;
+    border: none;
+    background-color: #fff;
+    z-index: 5;
+}
+.right__box button a{
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
+    color: #151F32;
+}
