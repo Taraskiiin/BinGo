@@ -42,14 +42,19 @@ html
 .nav a:last-child{
     margin-right: none;
 }
-.nav a:hover::before{
+.nav a::before{
     content:" ";
     position: absolute;
-    width: 50%;
+    width: 0;
     height: 1px;
     background-color: #151F32;
     top: 18px;
     left: 0;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+.nav a:hover::before{
+    width: 50%;
 }
 .sing__up-block{
     min-width: 100px;
@@ -79,25 +84,29 @@ html
     position: relative;
     left: 94px;
     top: -60px;
-    
 }
 .left__box h3::before{
     content:" ";
     position: absolute;
-    width: 85px;
-    height: 10px;
+    width: 0px;
+    height: 15px;
     left: 8px;
     bottom: -15px;
     background-color: #032F48;
+    transition-timing-function: ease;
+    transition-duration: .5s;
+}
+.left__box h3:hover::before{
+    width: 85px;
 }
 .left__box h3::after{
     content:" ";
     position: absolute;
-    width: 47px;
-    height: 13px;
-    right: 60px;
+    width: 13%;
+    height: 9%;
+    right: 70px;
     top: 51px;
-    background-color: #032F48;
+    background-color: #032F48;   
 }
 .left__box-inner{
     position: relative;
@@ -120,6 +129,7 @@ html
     height: 48px;
     right: -245px;
     top: 0;
+    cursor: pointer;
 }
 .tools__box::after{
     content: " ";
@@ -132,7 +142,7 @@ html
     margin-left: 18px;
 }
 .right__box{
-    background-color: #151F32;
+    background-color: #032F48;
     width: 565px;
     height: 492px;
     padding-top: 56px;
@@ -164,6 +174,7 @@ html
     background-image: url(../image/Vector__stop.svg);
     bottom: -60px;
     left: 0;
+    cursor: pointer;
 }
 .right__box p::after{
     content: ' ';
@@ -173,6 +184,7 @@ html
     background-image: url(../image/Vector__next.svg);
     bottom: -63px;
     left: 40px;
+    cursor: pointer;
 }
 .right__box .blue__block{
     width: 207px;
@@ -190,7 +202,7 @@ html
     height: 500px;
     bottom: -185px;
     right: -335px;
-    background-color: #FF7C14;
+    background-color: #F1552C;
     z-index: 1;
     transform: matrix(0.7, -0.71, -0.71, -0.7, 0, 0);
 }
@@ -214,13 +226,18 @@ html
     border: none;
     background-color: #fff;
     z-index: 5;
+    color: #151F32;
+    cursor: pointer;
 }
 .right__box button a{
     text-decoration: none;
     font-weight: 900;
     font-size: 17px;
     line-height: 20px;
-    color: #151F32;
+    color: inherit;
+}
+.right__box button a:hover{
+    color: #F9BA51;
 }
 .header__bottom-line{
     margin-top: 50px;
