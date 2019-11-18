@@ -352,32 +352,29 @@ html
     max-width: 190px;
     max-height: 66px;
 }
-.past__right-block button,
-.new__right-block button{
-    border: none;
+.past__right-block a,
+.new__right-block a{
+    display: block;
     background-color: #151F32;
     width: 139px;
+    padding-top: 15px;
+    padding-left: 45px;
     height: 49px;
     color: #Fff;
     position: relative;
-    cursor: pointer;
+    text-decoration: none;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
 }
-.past__right-block button::after{
+.past__right-block h2::after{
     content: " ";
     width: 60px;
     height: 7px;
     background-color: #151F32;
     position: absolute;
-    left: 265%;
-    top: calc(49px - 50%);    
-}
-.past__right-block button a,
-.new__right-block button a{
-    text-decoration: none;
-    font-weight: 900;
-    font-size: 17px;
-    line-height: 20px;
-    color: inherit;
+    left: calc(100% - 60px);
+    bottom: -185px;    
 }
 .new__inner{
     color: #151F32; 
@@ -557,6 +554,27 @@ html
     color: #FFFFFF;
     padding-left: 30px;
     z-index: 0;
+    position: relative;
+}
+.next__left-block::before{
+    content: " ";
+    position: absolute;
+    width: 16px;
+    height: 12px;
+    background-image: url(../image/Vector__stop.svg);
+    top: 75%;
+    left: 30;
+    cursor: pointer;
+}
+.next__left-block::after{
+    content: ' ';
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    background-image: url(../image/Vector__next.svg);
+    top:calc(75% - 3px);
+    left: 70px;
+    cursor: pointer;
 }
 .next__leftbox-title{
     font-weight: 900;
@@ -658,6 +676,9 @@ html
 .suscipit__laboriosam-inner{
     margin-left: 25px;
 }
+.suscipit-laboriosam .container__wrapper{
+    max-height: 200px;
+}
 .suscipit__laboriosam-inner .right__block{
     max-width: 210px;
     margin-left: 0px;
@@ -693,6 +714,99 @@ html
     position: absolute;
     top: -3px;
     left: calc(100% + 5px);
+}
+.our__programs .container__wrapper{
+    position: relative;
+    max-height: 300px;
+}
+.our__programs .container__wrapper::before{
+    content: ' ';
+    width: 100px;
+    height: 7px;
+    background-color: #151F32;
+    position: absolute;
+    top: 130%;
+    left: calc(240px - 99px);
+}
+.our__programs .container__wrapper::after{
+    position: absolute;
+    content: ' ';
+    top: 0;
+    width: 38px;
+    height: 7px;
+    background-color: #151F32;
+    top: 25%;
+    right:calc(100px - 38px);
+}
+.our__programs-box{
+    margin-left: 240px;
+    width: 822px;
+    height: 389px;
+    background-image: url(../image/our_prgms.png);
+    display: flex;
+    justify-content: space-around;
+    padding-left: 40px;
+    padding-top: 72px;
+    position: relative;
+}
+.our__programs-box::after{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border: 389px solid transparent;
+    border-bottom: 0 solid #F1552C;
+    border-left: 531px solid #F1552C;
+}
+.our__programs-box .leftblock{
+    width: 371px;
+    height: 246px;
+    background-image: url(../image/keyboard__pic.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 5; 
+    margin-right: 60px;
+    margin-top: 58px;  
+}
+.our__programs-box .rightblock{
+    max-width: 352px;
+    height: 317px;
+    background-color: #032F48;
+    padding-top: 36px;
+    padding-left: 53px;
+    padding-right: 68px;
+    color: #FCD3AC;
+}
+.our__programs-box .rightblock h3{
+    font-weight: 900;
+    font-size: 26px;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+.our__programs-box .rightblock p{
+    font-weight: 500;
+    font-size: 12px;
+    margin-bottom: 45px;
+}
+.rightblock .subscribe{
+    display: block;
+    cursor: pointer;
+    width: 139px;
+    text-decoration: none;
+    height: 49px;
+    padding-top: 15px;
+    padding-left: 33px;
+    background-color: #EFF7FF;
+    font-weight: 900;
+    font-size: 17px;
+    line-height: 20px;
+    color: #032F48;
+    z-index: 3;
+}
+.footer .container__wrapper{
+    max-height: 200px;
 }
 .footer__inner{
     padding: 0 320 46px 160px;
@@ -735,34 +849,4 @@ html
     margin-top: 15px;
 }
 @media screen and (max-width: 700px) {
-    .footer,
-    .suscipit-laboriosam,
-    .next,
-    .new,
-    .past,
-    .header{
-        
-        display: none;
     }
-    body{
-        width: 350px;
-        height: 350px;
-        background-repeat: no-repeat;
-        background-color: #739f60;
-        background-image: url(../image/Illuminati-Logo.png);
-        background-size: contain;
-        position: relative;
-        background-position: center;
-        
-    }
-    body::after{
-    content: "Icanseeyou";
-    color: #000000;
-    position: absolute;
-    font-size: 40px;
-    font-weight: 900;
-    bottom: 20px;
-    left: calc(60% - 100px);
-    text-transform: uppercase;    
-    }
-} 
