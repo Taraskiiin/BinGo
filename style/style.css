@@ -599,9 +599,11 @@ html
     height: 43px;
     background-color: #fff;
     position: relative;
+    cursor: pointer;
 }
 .next__left-block button::before{
     content: " ";
+    cursor: pointer;
     position: absolute;
     border: 7px solid transparent;
     border-left: 10px solid #151F32;
@@ -856,16 +858,23 @@ html
     .nav a{
         margin-right: 50px;
     }
-    .tools__box{
-        left: 100%;
-    }
-    }
-@media screen and (width: 955px) {
     .header__middle-box{
         flex-direction: column;  
+        justify-content: center;
     }
     .header__middle-box .left__box{
         margin-bottom: 30px;
-        max-height: 250px;
+        max-height: 450px;
+        margin-top: 0;
     }
+    .left__box h3::after{
+        display: none;
+    }
+    .container__wrapper{
+        max-width: 950px;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 950px) {
+    
 }
