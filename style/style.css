@@ -174,25 +174,39 @@ html
     margin-left: 69px;
     position: relative;
 }
-.right__box p::before{
-    content: ' ';
+.slider__inner .slick-btn{
     position: absolute;
-    width: 16px;
-    height: 12px;
-    background-image: url(../image/Vector__stop.svg);
-    bottom: -60px;
-    left: 0;
-    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    top: calc(100% + 33px);
+    background-color: #032F48;
 }
-.right__box p::after{
-    content: ' ';
-    position: absolute;
-    width: 24px;
-    height: 18px;
-    background-image: url(../image/Vector__next.svg);
-    bottom: -63px;
-    left: 40px;
-    cursor: pointer;
+.slider__inner .slick-disabled{
+     content: ' ';
+     background-image: url(../image/Vector__stop.svg);
+     transform: rotate(180deg);
+     width: 30px;
+     height: 30px;
+     background-position: center;
+     background-repeat: no-repeat;
+     cursor: default;
+}
+.slick-prev[aria-disabled]{
+    transform: rotate(0deg);
+}
+.slick-prev,
+.slick-next {
+     content: ' ';
+     position: absolute;
+     background-image: url(../image/Vector__next.svg);
+     background-position: center;
+     background-repeat: no-repeat;
+     left: 19%;
+     cursor: pointer;
+}
+.slick-prev{
+    left: 12%;
+    background-image: url(../image/vectorpaint.svg);
 }
 .right__box .blue__block{
     width: 207px;
